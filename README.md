@@ -37,3 +37,13 @@ $ sudo dmesg
 [10388.929879] KERNEL:INFO:Hello from Free Pascal!
 [10421.320454] KERNEL:INFO:Bye-bye!
 ```
+## Troubleshooting
+```
+Compiling system.pas
+system.pas(12,10) Error: Duplicate identifier "Char"
+```
+You may get this error depending on which version FPC (e.g. 3.2.2) you're using. Try removing the line
+```
+Char = #0..#255;
+```
+from `system.pas` file.
